@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "blue-white-ceramic-bath-accessories",
+    "title": "Blue White Ceramic Large Bath",
+    "category": "bathroom",
+    "price": "88.00",
+    "sale_price": null,
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_4.jpg",
+      "assets/uploads/2026/01/Bathroom_9.jpg",
+      "assets/uploads/2026/01/Bathroom_3.jpg",
+      "assets/uploads/2026/01/Bathroom_8.jpg",
+      "assets/uploads/2026/01/Bathroom_2.jpg",
+      "assets/uploads/2026/01/Kitchen_5.jpg",
+      "assets/uploads/2026/01/Bathroom_7.jpg"
+    ]
+  },
+  {
+    "slug": "clark-light-persimmon-faux-mohair",
+    "title": "Clark Light Persimmon Faux Mohair",
+    "category": "kitchen",
+    "price": "133.00",
+    "sale_price": null,
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_7.jpg",
+      "assets/uploads/2026/01/Kitchen_3.jpg",
+      "assets/uploads/2026/01/Bedroom_4.jpg",
+      "assets/uploads/2026/01/Kitchen_1.jpg",
+      "assets/uploads/2026/01/Kitchen_4.jpg"
+    ]
+  },
+  {
+    "slug": "damon-aged-brass-cabinet-knob",
+    "title": "Damon Aged Brass Cabinet Knob",
+    "category": "kitchen",
+    "price": "55.00",
+    "sale_price": null,
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_6.jpg",
+      "assets/uploads/2026/01/Kitchen_8.jpg",
+      "assets/uploads/2026/01/Kitchen_2.jpg",
+      "assets/uploads/2026/01/Kitchen_5.jpg",
+      "assets/uploads/2026/01/Kitchen_9.jpg"
+    ]
+  },
+  {
+    "slug": "damon-aged-brass-cabinet-knob-2",
+    "title": "Damon Aged Brass Cabinet Knob",
+    "category": "living-room",
+    "price": "87.00",
+    "sale_price": "66.00",
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Living_3.jpg",
+      "assets/uploads/2026/01/Bathroom_2.jpg",
+      "assets/uploads/2026/01/Living_6.jpg",
+      "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Bedroom_3.jpg",
+      "assets/uploads/2026/01/Kitchen_9.jpg"
+    ]
+  },
+  {
+    "slug": "fitz-channeled-grey-boucle-chair",
+    "title": "Fitz Channeled Grey Boucle Chair",
+    "category": "bedroom",
+    "price": "86.00",
+    "sale_price": "68.00",
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Bedroom_9.jpg",
+      "assets/uploads/2026/01/Bedroom_6.jpg",
+      "assets/uploads/2026/01/Bedroom_4.jpg",
+      "assets/uploads/2026/01/Bedroom_1.jpg",
+      "assets/uploads/2026/01/Bedroom_5.jpg",
+      "assets/uploads/2026/01/Bedroom_7.jpg"
+    ]
+  },
+  {
+    "slug": "jomparis-wall-clock-12inch-non",
+    "title": "Jomparis Wall Clock 12Inch Non",
+    "category": "living-room",
+    "price": "188.00",
+    "sale_price": null,
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Living_6.jpg",
+      "assets/uploads/2026/01/Bedroom_3.jpg",
+      "assets/uploads/2026/01/Kitchen_9.jpg",
+      "assets/uploads/2026/01/Bathroom_2.jpg"
+    ]
+  },
+  {
+    "slug": "matri-white-leather-office-chair",
+    "title": "Matri White Leather Office Chair",
+    "category": "office",
+    "price": "138.00",
+    "sale_price": "130.00",
+    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "images": [
+      "assets/uploads/2026/01/Office_5.jpg",
+      "assets/uploads/2026/01/Office_8.jpg",
+      "assets/uploads/2026/01/Office_7.jpg",
+      "assets/uploads/2026/01/Office_1.jpg",
+      "assets/uploads/2026/01/Office_3.jpg"
+    ]
+  }
+]

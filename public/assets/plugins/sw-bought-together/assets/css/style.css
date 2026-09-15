@@ -1,0 +1,146 @@
+.bought-together-section {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.bought-together-section .bought-together-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.bought-together-section .bought-together-item input.bought-together-checkbox {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: var(--text-color);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.bought-together-section .bought-together-item input.bought-together-checkbox:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 14px 14px #fff;
+  transform-origin: bottom left;
+  clip-path: polygon(7% 53%,1% 66%,49% 91%,100% 21%,89% 12%,46% 73%);
+}
+.bought-together-section .bought-together-item input.bought-together-checkbox:checked {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.bought-together-section .bought-together-item input.bought-together-checkbox:checked:before {
+  transform: scale(1);
+}
+.bought-together-section .bought-together-item.disabled .bought-together-item-inner {
+  opacity: 0.5;
+}
+.bought-together-section .bought-together-item .bought-together-item-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bought-together-section .bought-together-item .bought-together-item-inner img {
+  max-width: 100px;
+}
+.bought-together-section .bought-together-item .bought-together-item-inner .bought-together-item-content > span {
+  display: block;
+  margin-bottom: 7px;
+}
+.bought-together-section .bought-together-item .bought-together-item-inner .bought-together-item-content select {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid var(--text-color);
+  text-transform: capitalize;
+}
+.bought-together-section .bought-together-item .bought-together-item-inner .bought-together-item-content span.item-price {
+  font-weight: 700;
+  color: #22c55e;
+}
+.bought-together-section .bought-together-total {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.bought-together-section .bought-together-add-all {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+}
+.bought-together-section.style2 {
+  padding: 40px;
+}
+.bought-together-section.style2 .bought-together-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.bought-together-section.style2 .bought-together-items-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.bought-together-section.style2 .bought-together-items-top .bought-together-item-top {
+  max-width: 180px;
+  position: relative;
+}
+.bought-together-section.style2 .bought-together-items-top .bought-together-item-top.disabled img {
+  opacity: 0.5;
+}
+.bought-together-section.style2 .bought-together-items-top .bought-together-item-top:after {
+  content: '+';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -27px;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+.bought-together-section.style2 .bought-together-items-top .bought-together-item-top:last-child:after {
+  display: none;
+}
+.bought-together-section.style2 .bought-together-item {
+  margin-bottom: 15px;
+  colum-gap: 10px;
+}
+.bought-together-section.style2 .bought-together-item .bought-together-item-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	row-gap: 5px;
+}
+.bought-together-section span.bought-together-first-title{
+	font-weight: 500;
+}
+.bought-together-section.style2 .bought-together-item select {
+  padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.bought-together-section.style2 .bought-together-item .item-price {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+@media ( max-width: 1024px ){
+	.bought-together-section.style2 .bought-together-wrapper{
+		grid-template-columns: 100%;
+	}
+}

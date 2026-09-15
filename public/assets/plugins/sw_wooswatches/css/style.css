@@ -1,0 +1,182 @@
+.sw-variation-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 15px;
+}
+.sw-custom-variation{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	row-gap: 8px;
+}
+.sw-custom-variation input[type="radio"] {
+  display: none;
+}
+.sw-custom-variation .sw-radio-variation {
+  margin: 0;
+  position: relative;
+	display: inline-block;
+}
+.sw-custom-variation .sw-radio-variation span {
+  display: block;
+  height: 100%;
+  line-height: 30px;
+  min-width: 30px;
+  text-align: center;
+  min-height: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+}
+.sw-custom-variation .sw-radio-variation span.variation-color,
+.sw-custom-variation .sw-radio-variation span.variation-image {
+  text-indent: -9999px;
+}
+.sw-custom-variation .sw-radio-variation span.variation-image {
+  background-size: 100% 100%;
+}
+.sw-custom-variation .sw-radio-variation span:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  display: block;
+  border: 1px solid #ddd;
+}
+.sw-custom-variation .sw-radio-variation.selected span {
+  background-color: #ff5c00;
+  color: #fff;
+}
+.sw-custom-variation .sw-radio-variation.selected span:after {
+  border-color: #ff5c00;
+}
+.sw-custom-variation .sw-radio-variation.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.sw-custom-variation .sw-radio-variation.disabled span:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #ff5c00;
+  height: 44px;
+  transform: rotate(45deg);
+  top: -7px;
+  right: 15px;
+  opacity: 1;
+}
+.sw-custom-variation .sw-radio-variation .variation-tooltip {
+  position: absolute;
+  bottom: 110%;
+  z-index: 9999;
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.sw-custom-variation .sw-radio-variation:hover .variation-tooltip {
+  display: block;
+}
+
+.item-img .sw-custom-variation {
+  margin: 15px 0;
+}
+.item-img .sw-custom-variation .sw-radio-variation span.variation-color {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  min-width: initial;
+  min-height: initial;
+  width: 18px;
+  height: 18px;
+}
+.item-img .sw-custom-variation .sw-radio-variation span.variation-color:after {
+  display: none;
+}
+.item-img .sw-custom-variation .sw-radio-variation span.variation-image {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.item-content .sw-custom-variation {
+  margin: 15px 0;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-color {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  min-width: initial;
+  min-height: initial;
+  width: 18px;
+  height: 18px;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-color:after {
+  display: none;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-image {
+  min-width: 40px;
+  min-height: 40px;
+}
+#sw_wooswatches_alert{
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transition: all 0.3s ease;
+	opacity: 0;
+	z-index: 1025;
+	visibility: hidden;	
+	transform: translate(-50%, -50%);
+}
+#sw_wooswatches_alert.active{
+	top: 50%;
+	opacity: 1;
+	visibility: visible;
+}
+#sw-wooswatches-alert-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	z-index: 1024;
+	display: none;
+}
+#sw-wooswatches-alert-overlay.active{
+	display: block;
+}
+.sw-wooswatches-alert-content{
+	background: #fff;
+	padding: 20px;
+	box-shadow: 0 0 12px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	position: relative;
+	display: grid;
+	gap: 10px;
+}
+.sw-wooswatches-alert-content .close-popup{
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 5px;
+	border: 1px solid #000;
+	background: #000;
+	color: #fff;
+	padding: 6px 20px;
+	margin: 0 auto;
+}
+.sw-wooswatches-alert-content .close-popup:hover{
+	background: #fff;
+	color: #000;
+}

@@ -1,0 +1,79 @@
+<x-admin-layout :title="'Products'">
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <h2 class="text-lg font-semibold text-gray-800">All Products</h2>
+            <p class="text-sm text-gray-500">Manage your store's product catalog.</p>
+        </div>
+        <a href="{{ route('admin.products.create') }}"
+           class="px-4 py-2.5 bg-[#22c55e] hover:bg-[#1ea34f] text-white rounded-lg text-sm font-medium shadow-sm">
+            + Add Product
+        </a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <table class="min-w-full divide-y divide-gray-100">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                @forelse ($products as $product)
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                @if ($product->image)
+                                    <img src="{{ asset('storage/' . $product->image) }}" class="h-12 w-12 object-cover rounded-lg border">
+                                @else
+                                    <div class="h-12 w-12 bg-gray-100 rounded-lg"></div>
+                                @endif
+                                <div>
+                                    <div class="font-medium text-gray-800">{{ $product->title }}</div>
+                                    @if ($product->sku)
+                                        <div class="text-xs text-gray-400">SKU: {{ $product->sku }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-600">{{ $product->category?->name ?? '—' }}</td>
+                        <td class="px-6 py-4 text-sm">
+                            @if ($product->stock > 0)
+                                <span class="text-gray-700">{{ $product->stock }} in stock</span>
+                            @else
+                                <span class="text-red-500">Out of stock</span>
+                            @endif
+                        </td>
+                        <td class="px-6 py-4 text-sm">
+                            @if ($product->sale_price)
+                                <span class="line-through text-gray-400">${{ number_format($product->price, 2) }}</span>
+                                <span class="text-[#16a34a] font-semibold">${{ number_format($product->sale_price, 2) }}</span>
+                            @else
+                                <span class="text-gray-800">${{ number_format($product->price, 2) }}</span>
+                            @endif
+                        </td>
+                        <td class="px-6 py-4 text-right space-x-3 whitespace-nowrap">
+                            <a href="{{ route('admin.products.edit', $product) }}" class="text-sm text-blue-600 hover:underline">Edit</a>
+                            <form action="{{ route('admin.products.destroy', $product) }}" method="POST" class="inline" onsubmit="return confirm('Delete this product?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-sm text-red-600 hover:underline">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="5" class="px-6 py-12 text-center text-gray-400">No products yet — add your first one.</td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4">
+        {{ $products->links() }}
+    </div>
+</x-admin-layout>
