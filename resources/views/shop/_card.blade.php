@@ -14,6 +14,11 @@
                 @endif
             </a>
             <div class="item-bottom ">
+                <button type="button" class="wishlist-toggle icon-svg" data-product-id="{{ $product->id }}" title="Add to wishlist" aria-label="Add to wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12.001 3.818a6.228 6.228 0 0 1 8.51 9.087l-5.224 5.225h-.001L12 21.415l-7.28-7.279l-1.23-1.232A6.228 6.228 0 0 1 12 3.818m3.285 11.485l3.811-3.812a4.228 4.228 0 1 0-5.98-5.98L12 6.627L10.883 5.51a4.228 4.228 0 1 0-5.98 5.98l1.232 1.232L12 18.587l3.285-3.285" />
+                    </svg>
+                </button>
                 <a href="#" class="compare icon-svg" rel="nofollow" title="Compare">
                     <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h48v48H0z" fill="none"/>

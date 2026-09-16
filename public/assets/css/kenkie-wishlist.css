@@ -1,0 +1,19 @@
+.wishlist-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: inherit;
+}
+.wishlist-toggle svg {
+	transition: fill .15s ease, color .15s ease;
+}
+.wishlist-toggle.is-active {
+	color: #22c55e;
+}
+.wishlist-toggle.is-active svg {
+	fill: currentColor;
+}

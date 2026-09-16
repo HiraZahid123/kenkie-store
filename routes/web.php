@@ -10,6 +10,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,8 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/shop/index.html', [ShopController::class, 'index'])->name('shop');
-Route::get('/product-category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/product-category/{slug}/index.html', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/product-category/{slug}', [CategoryController::class, 'show'])->name('category.show.short');
 Route::get('/product/{slug}/index.html', [ProductController::class, 'show'])->name('product.show');
+Route::get('/wishlist/index.html', [WishlistController::class, 'index'])->name('wishlist');
+Route::get('/wishlist/items', [WishlistController::class, 'items'])->name('wishlist.items');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
