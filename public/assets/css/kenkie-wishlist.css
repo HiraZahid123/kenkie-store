@@ -30,3 +30,39 @@
 	outline-offset: 2px;
 	border-radius: 50%;
 }
+
+/* Amazon / eBay icons in the top navbar, replacing the old language/currency
+   switchers. Tooltip is shown on hover only. */
+.kenkie-marketplace-icon {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	text-decoration: none;
+}
+.kenkie-marketplace-icon:hover {
+	color: #22c55e;
+}
+.kenkie-icon-tooltip {
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	white-space: nowrap;
+	padding: 4px 10px;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .15s ease;
+	pointer-events: none;
+	z-index: 30;
+}
+.kenkie-marketplace-icon:hover .kenkie-icon-tooltip {
+	opacity: 1;
+	visibility: visible;
+}
