@@ -19,16 +19,26 @@
 }
 
 /* Give the product-card quick-action icons (wishlist / compare / quick view)
-   a visible green ring on hover so they don't disappear against a white
-   product photo. Uses outline (not border) so it never shifts layout. */
-.item-bottom .add_to_wishlist:hover,
-.item-bottom .compare:hover,
-.item-bottom .sw-quickview:hover,
-.item-bottom .wishlist-toggle:hover,
-.wishlist-toggle:hover {
+   a visible green ring at all times (not just on hover) so they don't
+   disappear against a white product photo. Uses outline (not border) so it
+   never shifts layout. */
+.item-bottom .add_to_wishlist,
+.item-bottom .compare,
+.item-bottom .sw-quickview,
+.item-bottom .wishlist-toggle,
+.wishlist-toggle {
 	outline: 2px solid #22c55e !important;
 	outline-offset: 2px;
 	border-radius: 50%;
+}
+
+/* The theme anchors this icon stack to the right edge of the product image
+   (`.item-wrap .item-img .item-bottom { right: 15px }`) — move it to the
+   left edge instead. */
+.item-wrap .item-img .item-bottom,
+.item-bottom {
+	right: auto !important;
+	left: 15px !important;
 }
 
 /* Amazon / eBay icons in the top navbar, replacing the old language/currency
