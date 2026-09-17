@@ -2693,12 +2693,18 @@ body.overflow.woocommerce-cart {
   content: '';
 }
 .swe-woo-countdown-slider.style-2 .swe-slider .slick-list .item-wrap .item-content .countdown-info .countdown-times > div b {
-  width: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
   height: 40px;
+  padding: 0 6px;
+  box-sizing: border-box;
   background-color: var(--secondary-color);
   border-radius: 5px;
   color: #fff;
-  line-height: 40px;
+  line-height: normal;
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 400;
 }
@@ -2759,13 +2765,18 @@ body.overflow.woocommerce-cart {
   content: '';
 }
 .swe-woo-countdown-slider.style-3 .swe-wrap-head .swe-countdown-head .countdown-info .countdown-times > div b {
-  width: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
   height: 50px;
+  padding: 0 6px;
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 5px;
   color: var(--text-color);
-  line-height: 50px;
-  display: block;
+  line-height: normal;
+  white-space: nowrap;
 }
 .swe-woo-countdown-slider.style-3 .swe-wrap-head .swe-countdown-head .countdown-info .countdown-times > div span {
   font-size: 12px;
@@ -4458,11 +4469,17 @@ body.overflow.woocommerce-cart {
   gap: 10px;
 }
 .swe-woo-countdown-slider.style-4 .slick-list .item-wrap .item-content .countdown-info .countdown .countdown-times > div b {
-  width: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
   height: 60px;
+  padding: 0 8px;
+  box-sizing: border-box;
   background-color: var(--primary-color);
-  border-radius: 50%;
-  line-height: 60px;
+  border-radius: 30px;
+  line-height: normal;
+  white-space: nowrap;
 }
 .swe-woo-countdown-slider.style-4 .slick-list .item-wrap .item-content .countdown-info .countdown .countdown-times > div span {
   font-size: 12px;
