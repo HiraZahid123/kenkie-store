@@ -18,14 +18,16 @@
 	fill: currentColor;
 }
 
-/* Give the product-card quick-action icons (wishlist / compare / quick view)
-   a visible green ring at all times (not just on hover) so they don't
-   disappear against a white product photo. Uses outline (not border) so it
-   never shifts layout. */
+/* Give the product-card quick-action icons (wishlist / compare / quick view /
+   add to cart) a visible green ring at all times (not just on hover) so they
+   don't disappear against a white product photo. Uses outline (not border)
+   so it never shifts layout. */
 .item-bottom .add_to_wishlist,
 .item-bottom .compare,
 .item-bottom .sw-quickview,
 .item-bottom .wishlist-toggle,
+.item-bottom .button,
+.item-bottom .add_to_cart_button,
 .wishlist-toggle {
 	outline: 2px solid #22c55e !important;
 	outline-offset: 2px;
