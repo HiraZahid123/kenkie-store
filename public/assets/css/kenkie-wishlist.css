@@ -78,3 +78,23 @@
 	opacity: 1;
 	visibility: visible;
 }
+
+/* Mobile header: the burger menu toggle is absolutely positioned (top:0;left:0)
+   over the header row, so it doesn't push the Amazon icon / login / search /
+   wishlist / cart row to the right on its own — on narrow screens they render
+   underneath it. Reserve space for it so nothing overlaps. */
+@media (max-width: 767px) {
+	.elementor-element-7087033 {
+		padding-left: 50px !important;
+	}
+}
+
+/* Hero slider (Slider Revolution) prev/next arrows: on mobile they're fixed
+   40x40px boxes positioned over the slide, which can sit on top of the slide
+   text at narrow widths. Swipe gestures already work on touch devices, so
+   hide the arrow buttons below tablet width and rely on swipe + dots. */
+@media (max-width: 767px) {
+	.sr7-arrows {
+		display: none !important;
+	}
+}
