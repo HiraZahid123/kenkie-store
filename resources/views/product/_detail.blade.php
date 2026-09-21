@@ -55,7 +55,9 @@
             </p>
         </div>
 
-        <form class="cart" action="#" method="post">
+        <form class="cart" action="{{ url('/cart/add') }}" method="post">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
             <div class="addcart-wrapper single-buynow">
                 <div class="quantity-wrapper">
                     <div class="quantity-text">Quantity: </div>

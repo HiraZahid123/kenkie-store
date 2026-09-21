@@ -21,9 +21,11 @@ class LegacyTemplate
 
         $pattern = '/(<ul class="products[^"]*">)(.*?)(<\/ul>\s*<div class="clear">)/s';
 
-        return preg_replace_callback($pattern, function ($m) use ($newCardsHtml) {
+        $spliced = preg_replace_callback($pattern, function ($m) use ($newCardsHtml) {
             return $m[1]."\n".$newCardsHtml."\n".$m[3];
         }, $html, 1);
+
+        return self::postProcess($spliced ?: $html);
     }
 
     /**
@@ -46,7 +48,8 @@ class LegacyTemplate
 
     public static function read(string $templateRelativePath): string
     {
-        return file_get_contents(self::templatePath($templateRelativePath));
+        $html = file_get_contents(self::templatePath($templateRelativePath));
+        return self::postProcess($html);
     }
 
     /**
@@ -60,8 +63,98 @@ class LegacyTemplate
 
         $pattern = '/(<div class="product-detail">)(.*?)(<div class="woocommerce-tabs)/s';
 
-        return preg_replace_callback($pattern, function ($m) use ($newDetailHtml) {
+        $spliced = preg_replace_callback($pattern, function ($m) use ($newDetailHtml) {
             return $m[1]."\n".$newDetailHtml."\n".$m[3];
         }, $html, 1);
+
+        return self::postProcess($spliced ?: $html);
+    }
+
+    /**
+     * Replace the static "New Arrivals" product list on the homepage
+     * with DB-driven cards.
+     * Targets: <ul class="products swe-list-wrappe slider-track"> … </ul>
+     */
+    public static function spliceHomeNewArrivals(string $html, string $cardsHtml): string
+    {
+        $pattern = '/(<ul class="products swe-list-wrappe slider-track">)(.*?)(<\/ul>)/s';
+
+        return preg_replace_callback($pattern, function ($m) use ($cardsHtml) {
+            return $m[1] . "\n" . $cardsHtml . "\n" . $m[3];
+        }, $html, 1);
+    }
+
+    /**
+     * Replace every static "Best Sellers" tab product list on the homepage
+     * with the same DB-driven cards (all tabs show the same products).
+     * Targets: <ul class="products swe-slider" …> … </ul>  (all occurrences)
+     */
+    public static function spliceHomeBestSellers(string $html, string $cardsHtml): string
+    {
+        $pattern = '/(<ul class="products swe-slider"[^>]*>)(.*?)(<\/ul>)/s';
+
+        return preg_replace_callback($pattern, function ($m) use ($cardsHtml) {
+            return $m[1] . "\n" . $cardsHtml . "\n" . $m[3];
+        }, $html);
+    }
+
+    /**
+     * Replace the static category icon slider items on the homepage
+     * with DB-driven category items.
+     * Targets the swe-slider wrapper that holds the category swe-item divs.
+     */
+    public static function spliceHomeCategorySlider(string $html, string $itemsHtml): string
+    {
+        $pattern = '/(<div class="swe-slider"[^>]*>)(.*?)(<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<div class="elementor-element elementor-element-3812a9a)/s';
+
+        return preg_replace_callback($pattern, function ($m) use ($itemsHtml) {
+            return $m[1] . "\n" . $itemsHtml . "\n" . $m[3];
+        }, $html, 1);
+    }
+
+    /**
+     * Normalize links, inject CSRF token, ensure Cart and Wishlist scripts
+     * are loaded on all served legacy pages.
+     */
+    public static function postProcess(string $html): string
+    {
+        // 1. Inject CSRF meta tag if missing
+        if (!str_contains($html, 'name="csrf-token"')) {
+            $meta = '<meta name="csrf-token" content="'.csrf_token().'">';
+            $html = self::replaceOnce($html, '</head>', $meta."\n".'</head>');
+        }
+
+        // 2. Fix Wishlist navbar links: replace href="#" or href="../#" on Wishlist menu item
+        $html = preg_replace(
+            '/(<a\s+[^>]*href=["\'])(?:(?:\.\.\/)+#|#)(["\'][^>]*>.*?<span\s+class=["\']menu-title["\']>Wishlist<\/span>.*?<\/a>)/s',
+            '$1/wishlist/index.html$2',
+            $html
+        );
+        $html = preg_replace(
+            '/(<a\s+[^>]*href=["\'])(?:(?:\.\.\/)+#|#)(["\'][^>]*>.*?nav-wishlist-icon.*?<\/a>)/s',
+            '$1/wishlist/index.html$2',
+            $html
+        );
+        $html = preg_replace(
+            '/(<a\s+[^>]*class=["\'][^"\']*swg-wishlist-icon[^"\']*["\'][^>]*href=["\'])[^"\']*(["\'])/s',
+            '$1/wishlist/index.html$2',
+            $html
+        );
+
+        // 3. Remove old wishlist / cart scripts
+        $html = preg_replace('/<script[^>]*kenkie-wishlist\.js[^>]*><\/script>\s*/i', '', $html);
+        $html = preg_replace('/<script[^>]*kenkie-cart\.js[^>]*><\/script>\s*/i', '', $html);
+
+        // 4. Inject fresh scripts before </body>
+        $scripts = '<script src="/assets/js/kenkie-wishlist.js?v=5"></script>'."\n"
+                 . '<script src="/assets/js/kenkie-cart.js?v=5"></script>'."\n";
+
+        if (str_contains($html, '</body>')) {
+            $html = self::replaceOnce($html, '</body>', $scripts.'</body>');
+        } else {
+            $html .= "\n".$scripts;
+        }
+
+        return $html;
     }
 }

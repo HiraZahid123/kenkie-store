@@ -18,30 +18,25 @@
 	fill: currentColor;
 }
 
-/* Give the product-card quick-action icons (wishlist / compare / quick view /
-   add to cart) a visible green ring at all times (not just on hover) so they
-   don't disappear against a white product photo. Uses outline (not border)
-   so it never shifts layout. */
-.item-bottom .add_to_wishlist,
-.item-bottom .compare,
-.item-bottom .sw-quickview,
-.item-bottom .wishlist-toggle,
-.item-bottom .button,
-.item-bottom .add_to_cart_button,
-.wishlist-toggle {
-	outline: 2px solid #22c55e !important;
-	outline-offset: 2px;
-	border-radius: 50%;
-}
-
-/* The theme anchors this icon stack to the right edge of the product image
-   (`.item-wrap .item-img .item-bottom { right: 15px }`) — move it to the
-   left edge instead. */
+/* Product-card action buttons (wishlist / compare / quick view / add to cart) */
 .item-wrap .item-img .item-bottom,
 .item-bottom {
 	right: auto !important;
 	left: 15px !important;
+	bottom: 15px !important;
+	top: auto !important;
 }
+
+.item-bottom .add_to_wishlist,
+.item-bottom .compare,
+.item-bottom .sw-quickview,
+.item-bottom .button,
+.item-bottom .add_to_cart_button,
+.wishlist-toggle {
+	border-radius: 0 !important;
+	outline: none !important;
+}
+
 
 /* Amazon / eBay icons in the top navbar, replacing the old language/currency
    switchers. Tooltip is shown on hover only. */

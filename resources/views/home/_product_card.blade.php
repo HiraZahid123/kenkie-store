@@ -1,18 +1,23 @@
 @php
-    $img = $product->image ? asset('storage/'.$product->image) : asset('assets/themes/bemart/assets/img/img-404.jpg');
-    $link = url('/product/'.$product->slug.'/index.html');
+    $img  = $product->image
+        ? asset('storage/' . $product->image)
+        : asset('assets/themes/bemart/assets/img/img-404.jpg');
+    $link = url('/product/' . $product->slug . '/index.html');
 @endphp
 <li class="product type-product post-{{ $product->id }} status-publish instock product_cat-{{ $product->category->slug ?? 'uncategorized' }} has-post-thumbnail {{ $product->sale_price ? 'sale' : '' }} shipping-taxable purchasable product-type-simple">
     <div class="products-entry item-wrap short-button">
         <div class="item-img">
             <a href="{{ $link }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                 <div class="product-thumb-hover">
-                    <img loading="lazy" width="400" height="480" src="{{ $img }}" class="wp-post-image attachment-woocommerce_thumbnail" alt="{{ $product->title }}" decoding="async" />
+                    <img loading="lazy" width="400" height="480"
+                         src="{{ $img }}"
+                         class="wp-post-image attachment-woocommerce_thumbnail"
+                         alt="{{ $product->title }}" decoding="async" />
                 </div>
-                @if ($product->sale_price)
-                    <div class="sale-off">sale</div>
-                @endif
             </a>
+            @if ($product->sale_price)
+                <div class="sale-off">sale</div>
+            @endif
             <div class="item-bottom">
                 <div class="yith-wcwl-add-to-wishlist add-to-wishlist-{{ $product->id }} yith-wcwl-add-to-wishlist--link-style wishlist-fragment on-first-load" data-fragment-ref="{{ $product->id }}">
                     <div class="yith-wcwl-add-button">
@@ -50,10 +55,20 @@
             <div class="item-description">{{ \Illuminate\Support\Str::limit($product->description, 120) }}</div>
             <span class="price">
                 @if ($product->sale_price)
-                    <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->price, 2) }}</bdi></span></del>
-                    <ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->sale_price, 2) }}</bdi></span></ins>
+                    <del aria-hidden="true">
+                        <span class="woocommerce-Price-amount amount">
+                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->price, 2) }}</bdi>
+                        </span>
+                    </del>
+                    <ins aria-hidden="true">
+                        <span class="woocommerce-Price-amount amount">
+                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->sale_price, 2) }}</bdi>
+                        </span>
+                    </ins>
                 @else
-                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->price, 2) }}</bdi></span>
+                    <span class="woocommerce-Price-amount amount">
+                        <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($product->price, 2) }}</bdi>
+                    </span>
                 @endif
             </span>
             <a href="{{ $link }}" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_{{ $product->id }}" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="{{ $product->id }}" data-product_sku="" aria-label="Add to cart: &ldquo;{{ $product->title }}&rdquo;" rel="nofollow" data-success_message="&ldquo;{{ $product->title }}&rdquo; has been added to your cart" role="button">Add to cart</a>

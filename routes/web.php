@@ -6,23 +6,32 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return response()->file(public_path('index.html'));
-});
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('/shop/index.html', [ShopController::class, 'index'])->name('shop');
 Route::get('/product-category/{slug}/index.html', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/product-category/{slug}', [CategoryController::class, 'show'])->name('category.show.short');
 Route::get('/product/{slug}/index.html', [ProductController::class, 'show'])->name('product.show');
+
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.short');
 Route::get('/wishlist/index.html', [WishlistController::class, 'index'])->name('wishlist');
 Route::get('/wishlist/items', [WishlistController::class, 'items'])->name('wishlist.items');
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::get('/cart/index.html', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::get('/cart/data', [CartController::class, 'data'])->name('cart.data');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

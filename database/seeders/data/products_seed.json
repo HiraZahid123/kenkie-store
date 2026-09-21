@@ -1,65 +1,145 @@
 [
   {
+    "slug": "alto-organic-cotton-gauze-sheet",
+    "title": "Alto Organic Cotton Gauze Sheet",
+    "category": "bathroom",
+    "price": "72.00",
+    "sale_price": "58.00",
+    "description": "Crafted from 100% organic cotton gauze, this ultra-soft sheet set is gentle on sensitive skin and perfect for warm nights. The open-weave construction breathes freely, wicking moisture while staying light and airy. Machine washable and gets softer with every wash.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_3.jpg",
+      "assets/uploads/2026/01/Bathroom_7.jpg",
+      "assets/uploads/2026/01/Bathroom_5.jpg"
+    ]
+  },
+  {
     "slug": "blue-white-ceramic-bath-accessories",
-    "title": "Blue White Ceramic Large Bath",
+    "title": "Blue White Ceramic Bath Accessories",
     "category": "bathroom",
     "price": "88.00",
     "sale_price": null,
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "Elevate your bathroom with this elegant blue and white ceramic accessory set. Includes a soap dispenser, toothbrush holder, soap dish, and tumbler — all finished in a timeless hand-painted pattern. Durable, chip-resistant ceramic with a glossy finish.",
     "images": [
       "assets/uploads/2026/01/Bathroom_4.jpg",
       "assets/uploads/2026/01/Bathroom_9.jpg",
-      "assets/uploads/2026/01/Bathroom_3.jpg",
-      "assets/uploads/2026/01/Bathroom_8.jpg",
+      "assets/uploads/2026/01/Bathroom_2.jpg"
+    ]
+  },
+  {
+    "slug": "lateral-natural-teak-bath-mat",
+    "title": "Lateral Natural Teak Bath Mat",
+    "category": "bathroom",
+    "price": "112.00",
+    "sale_price": null,
+    "description": "Handcrafted from sustainably sourced teak wood, this bath mat adds a spa-like feel to your bathroom. The slatted design allows for quick drying and prevents mold buildup. Non-slip rubber feet keep it safely in place on wet tile floors.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_1.jpg",
+      "assets/uploads/2026/01/Bathroom_6.jpg",
+      "assets/uploads/2026/01/Bathroom_8.jpg"
+    ]
+  },
+  {
+    "slug": "lateral-natural-teak-bath-runner",
+    "title": "Lateral Natural Teak Bath Runner",
+    "category": "bathroom",
+    "price": "95.00",
+    "sale_price": null,
+    "description": "This long-format teak runner brings warmth and natural beauty to your bathroom floor. Made from premium plantation teak with a smooth oil finish, it's water-resistant and naturally antibacterial. Perfect for use outside the shower or bathtub.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_6.jpg",
       "assets/uploads/2026/01/Bathroom_2.jpg",
-      "assets/uploads/2026/01/Kitchen_5.jpg",
+      "assets/uploads/2026/01/Bathroom_5.jpg"
+    ]
+  },
+  {
+    "slug": "teak-natural-round-bathroom-stool",
+    "title": "Teak Natural Round Bathroom Stool",
+    "category": "bathroom",
+    "price": "134.00",
+    "sale_price": null,
+    "description": "A versatile round stool crafted from solid teak with a natural oil finish. Use it as a shower seat, bath-side table, or decorative plant stand. Waterproof, sturdy, and easy to clean — ideal for humid bathroom environments.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_2.jpg",
+      "assets/uploads/2026/01/Bathroom_7.jpg",
+      "assets/uploads/2026/01/Bathroom_1.jpg"
+    ]
+  },
+  {
+    "slug": "nexus-black-marble-toothbrush-holder",
+    "title": "Nexus Black Marble Toothbrush Holder",
+    "category": "bathroom",
+    "price": "45.00",
+    "sale_price": null,
+    "description": "Keep your bathroom tidy with this minimalist black marble toothbrush holder. Holds up to 4 toothbrushes with individual slots to prevent cross-contamination. The weighted base provides stability, and the natural marble pattern makes each piece unique.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_9.jpg",
+      "assets/uploads/2026/01/Bathroom_4.jpg",
+      "assets/uploads/2026/01/Bathroom_3.jpg"
+    ]
+  },
+  {
+    "slug": "savon-matte-black-single-bottle",
+    "title": "Savon Matte Black Soap Dispenser",
+    "category": "bathroom",
+    "price": "38.00",
+    "sale_price": null,
+    "description": "A sleek matte-black soap dispenser with a premium pump mechanism for smooth, controlled dispensing. The large-capacity bottle reduces refill frequency, and the fingerprint-resistant finish keeps it looking spotless. Compatible with soap, lotion, and sanitizer.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_5.jpg",
+      "assets/uploads/2026/01/Bathroom_8.jpg",
+      "assets/uploads/2026/01/Bathroom_6.jpg"
+    ]
+  },
+  {
+    "slug": "rubber-coated-white-waste-basket",
+    "title": "Rubber Coated White Waste Basket",
+    "category": "bathroom",
+    "price": "29.00",
+    "sale_price": null,
+    "description": "This modern waste basket features a smooth rubber-coated exterior for a soft-touch feel and scratch-resistant finish. The open-top design makes disposal easy, while the sturdy base prevents tipping. Ideal for bathroom, bedroom, or home office use.",
+    "images": [
+      "assets/uploads/2026/01/Bathroom_8.jpg",
+      "assets/uploads/2026/01/Bathroom_3.jpg",
       "assets/uploads/2026/01/Bathroom_7.jpg"
     ]
   },
   {
-    "slug": "clark-light-persimmon-faux-mohair",
-    "title": "Clark Light Persimmon Faux Mohair",
-    "category": "kitchen",
-    "price": "133.00",
+    "slug": "willa-woven-hamper-leather-laundry",
+    "title": "Willa Woven Hamper Leather Laundry",
+    "category": "bathroom",
+    "price": "119.00",
     "sale_price": null,
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "This handwoven laundry hamper combines natural wicker with leather handles for a look that's as stylish as it is functional. The removable cotton liner makes washing easy, and the durable frame supports heavy loads without losing shape.",
     "images": [
-      "assets/uploads/2026/01/Kitchen_7.jpg",
-      "assets/uploads/2026/01/Kitchen_3.jpg",
+      "assets/uploads/2026/01/Bathroom_7.jpg",
+      "assets/uploads/2026/01/Bathroom_1.jpg",
+      "assets/uploads/2026/01/Bathroom_4.jpg"
+    ]
+  },
+  {
+    "slug": "bowtie-green-boucle-chair",
+    "title": "Bowtie Green Boucle Accent Chair",
+    "category": "bedroom",
+    "price": "349.00",
+    "sale_price": "299.00",
+    "description": "Make a bold statement with this curved bowtie accent chair upholstered in plush green boucle fabric. The sculptural silhouette and solid wood legs make it a true conversation piece. Ideal as a bedroom reading chair or living room accent.",
+    "images": [
+      "assets/uploads/2026/01/Bedroom_1.jpg",
       "assets/uploads/2026/01/Bedroom_4.jpg",
-      "assets/uploads/2026/01/Kitchen_1.jpg",
-      "assets/uploads/2026/01/Kitchen_4.jpg"
+      "assets/uploads/2026/01/Bedroom_7.jpg"
     ]
   },
   {
-    "slug": "damon-aged-brass-cabinet-knob",
-    "title": "Damon Aged Brass Cabinet Knob",
-    "category": "kitchen",
-    "price": "55.00",
+    "slug": "brett-taupe-velvet-accent-chair",
+    "title": "Brett Taupe Velvet Accent Chair",
+    "category": "bedroom",
+    "price": "289.00",
     "sale_price": null,
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "This elegant taupe velvet accent chair features deep button tufting and tapered solid wood legs. The high backrest provides excellent lumbar support while adding a refined, vintage-inspired touch to any room. Easy-care velvet resists fading and pilling.",
     "images": [
-      "assets/uploads/2026/01/Kitchen_6.jpg",
-      "assets/uploads/2026/01/Kitchen_8.jpg",
-      "assets/uploads/2026/01/Kitchen_2.jpg",
-      "assets/uploads/2026/01/Kitchen_5.jpg",
-      "assets/uploads/2026/01/Kitchen_9.jpg"
-    ]
-  },
-  {
-    "slug": "damon-aged-brass-cabinet-knob-2",
-    "title": "Damon Aged Brass Cabinet Knob",
-    "category": "living-room",
-    "price": "87.00",
-    "sale_price": "66.00",
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
-    "images": [
-      "assets/uploads/2026/01/Living_3.jpg",
-      "assets/uploads/2026/01/Bathroom_2.jpg",
-      "assets/uploads/2026/01/Living_6.jpg",
-      "assets/uploads/2026/01/Living_7.jpg",
       "assets/uploads/2026/01/Bedroom_3.jpg",
-      "assets/uploads/2026/01/Kitchen_9.jpg"
+      "assets/uploads/2026/01/Bedroom_6.jpg",
+      "assets/uploads/2026/01/Bedroom_9.jpg"
     ]
   },
   {
@@ -68,29 +148,323 @@
     "category": "bedroom",
     "price": "86.00",
     "sale_price": "68.00",
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "The Fitz chair features distinctive vertical channel tufting and a warm grey boucle upholstery that feels as luxurious as it looks. Solid beech wood legs with a natural finish. Compact dimensions make it perfect for smaller bedrooms and reading nooks.",
     "images": [
       "assets/uploads/2026/01/Bedroom_9.jpg",
       "assets/uploads/2026/01/Bedroom_6.jpg",
+      "assets/uploads/2026/01/Bedroom_4.jpg"
+    ]
+  },
+  {
+    "slug": "carson-mink-velvet-dining-armchair",
+    "title": "Carson Mink Velvet Dining Armchair",
+    "category": "bedroom",
+    "price": "265.00",
+    "sale_price": null,
+    "description": "The Carson dining armchair wraps you in sumptuous mink-toned velvet with a gracefully curved back and padded armrests. Gold-finished legs elevate the glamour quotient. Foam-padded seat ensures comfort during long meals or extended work sessions.",
+    "images": [
+      "assets/uploads/2026/01/Bedroom_2.jpg",
+      "assets/uploads/2026/01/Bedroom_5.jpg",
+      "assets/uploads/2026/01/Bedroom_8.jpg"
+    ]
+  },
+  {
+    "slug": "saviti-bone-velvet-bedroom-chair",
+    "title": "Saviti Bone Velvet Bedroom Chair",
+    "category": "bedroom",
+    "price": "310.00",
+    "sale_price": null,
+    "description": "Understated elegance meets everyday comfort in this bone-white velvet bedroom chair. The generous seat cushion and curved backrest cradle you perfectly, while the brushed gold legs add a sophisticated finish. A timeless piece for any bedroom or dressing room.",
+    "images": [
       "assets/uploads/2026/01/Bedroom_4.jpg",
       "assets/uploads/2026/01/Bedroom_1.jpg",
-      "assets/uploads/2026/01/Bedroom_5.jpg",
       "assets/uploads/2026/01/Bedroom_7.jpg"
     ]
   },
   {
-    "slug": "jomparis-wall-clock-12inch-non",
-    "title": "Jomparis Wall Clock 12Inch Non",
+    "slug": "etana-blue-leather-bed-chair",
+    "title": "Etana Blue Leather Bed Chair",
+    "category": "bedroom",
+    "price": "425.00",
+    "sale_price": null,
+    "description": "This bold accent chair is upholstered in premium blue leather with contrast stitching and a solid walnut base. The slightly reclined angle and generous cushioning make it ideal for relaxed reading or lounging. A statement piece that elevates any bedroom.",
+    "images": [
+      "assets/uploads/2026/01/Bedroom_7.jpg",
+      "assets/uploads/2026/01/Bedroom_3.jpg",
+      "assets/uploads/2026/01/Bedroom_6.jpg"
+    ]
+  },
+  {
+    "slug": "fitz-green-velvet-swivel-chair",
+    "title": "Fitz Green Velvet Swivel Chair",
+    "category": "bedroom",
+    "price": "395.00",
+    "sale_price": "359.00",
+    "description": "Bring a pop of color and function to your bedroom or office with this emerald green velvet swivel chair. 360-degree rotation, height-adjustable base, and thick foam cushioning combine style with all-day comfort. The channel-stitched back adds visual depth.",
+    "images": [
+      "assets/uploads/2026/01/Bedroom_5.jpg",
+      "assets/uploads/2026/01/Bedroom_8.jpg",
+      "assets/uploads/2026/01/Bedroom_2.jpg"
+    ]
+  },
+  {
+    "slug": "clark-light-persimmon-faux-mohair",
+    "title": "Clark Light Persimmon Faux Mohair Chair",
+    "category": "kitchen",
+    "price": "133.00",
+    "sale_price": null,
+    "description": "A warm persimmon-toned faux mohair fabric drapes over a solid beech frame with tapered legs. The Clark chair's compact profile makes it versatile for kitchen islands, dining tables, or accent use. Soft texture invites lingering at the table.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_7.jpg",
+      "assets/uploads/2026/01/Kitchen_3.jpg",
+      "assets/uploads/2026/01/Kitchen_1.jpg"
+    ]
+  },
+  {
+    "slug": "clark-mink-mohair-dining-armchair",
+    "title": "Clark Mink Mohair Dining Armchair",
+    "category": "kitchen",
+    "price": "159.00",
+    "sale_price": null,
+    "description": "The Clark Mink edition dining armchair pairs a rich mink-toned mohair blend upholstery with a slender metal frame in a brushed nickel finish. The padded armrests and generous seat depth ensure comfort for extended dining or working sessions.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_4.jpg",
+      "assets/uploads/2026/01/Kitchen_8.jpg",
+      "assets/uploads/2026/01/Kitchen_2.jpg"
+    ]
+  },
+  {
+    "slug": "damon-aged-brass-cabinet-knob",
+    "title": "Damon Aged Brass Cabinet Knob",
+    "category": "kitchen",
+    "price": "55.00",
+    "sale_price": null,
+    "description": "Update your kitchen or bathroom cabinets with these artisanal aged brass knobs. Each knob is hand-finished to develop a rich, warm patina that deepens over time. The solid zinc alloy construction provides lasting durability with a luxurious look.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_6.jpg",
+      "assets/uploads/2026/01/Kitchen_9.jpg",
+      "assets/uploads/2026/01/Kitchen_5.jpg"
+    ]
+  },
+  {
+    "slug": "damon-aged-brass-cabinet-knob-2",
+    "title": "Damon Brass Cabinet Pull Handle",
+    "category": "kitchen",
+    "price": "87.00",
+    "sale_price": "66.00",
+    "description": "A longer bar-pull version of the Damon hardware line, this aged brass cabinet handle adds an artisan touch to modern or farmhouse kitchens. Solid zinc alloy body with a hand-rubbed antiqued finish. Includes mounting hardware for easy installation.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_1.jpg",
+      "assets/uploads/2026/01/Kitchen_5.jpg",
+      "assets/uploads/2026/01/Kitchen_3.jpg"
+    ]
+  },
+  {
+    "slug": "expandable-cutlery-drawer-organizer",
+    "title": "Expandable Cutlery Drawer Organizer",
+    "category": "kitchen",
+    "price": "42.00",
+    "sale_price": null,
+    "description": "Keep your kitchen drawers neat and functional with this expandable cutlery organizer. Adjustable width fits most standard drawers, with separate compartments for forks, knives, spoons, and utensils. Made from BPA-free materials, dishwasher safe for easy cleaning.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_2.jpg",
+      "assets/uploads/2026/01/Kitchen_6.jpg",
+      "assets/uploads/2026/01/Kitchen_9.jpg"
+    ]
+  },
+  {
+    "slug": "3-piece-cast-iron-skillet-set",
+    "title": "3-Piece Cast Iron Skillet Set",
+    "category": "kitchen",
+    "price": "98.00",
+    "sale_price": null,
+    "description": "This pre-seasoned cast iron skillet set includes 6-inch, 8-inch, and 10-inch pans — ideal for everything from eggs to searing steaks. Compatible with all cooktops including induction, and oven-safe up to 500°F. Cast iron retains heat evenly for perfect cooking results.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_8.jpg",
+      "assets/uploads/2026/01/Kitchen_4.jpg",
+      "assets/uploads/2026/01/Kitchen_7.jpg"
+    ]
+  },
+  {
+    "slug": "klub-olive-green-dining-chair",
+    "title": "Klub Olive Green Dining Chair",
+    "category": "kitchen",
+    "price": "175.00",
+    "sale_price": null,
+    "description": "The Klub dining chair makes a subtle yet striking impression in earthy olive green fabric over a solid oak frame. The contoured backrest and upholstered seat provide genuine comfort, while the timeless Scandinavian-inspired design suits both casual and formal dining rooms.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_5.jpg",
+      "assets/uploads/2026/01/Kitchen_1.jpg",
+      "assets/uploads/2026/01/Kitchen_8.jpg"
+    ]
+  },
+  {
+    "slug": "foldable-rolling-utility-cart",
+    "title": "Foldable Rolling Utility Cart",
+    "category": "kitchen",
+    "price": "65.00",
+    "sale_price": null,
+    "description": "This versatile 3-tier rolling cart folds flat for easy storage when not in use. Heavy-duty steel frame with smooth-rolling casters, two of which lock for stability. Perfect for kitchen organization, craft supplies, or as a mobile workspace.",
+    "images": [
+      "assets/uploads/2026/01/Kitchen_3.jpg",
+      "assets/uploads/2026/01/Kitchen_7.jpg",
+      "assets/uploads/2026/01/Kitchen_2.jpg"
+    ]
+  },
+  {
+    "slug": "hawk-carved-oak-side-table",
+    "title": "Hawk Carved Oak Side Table",
+    "category": "living-room",
+    "price": "245.00",
+    "sale_price": null,
+    "description": "The Hawk side table is hand-carved from solid oak with a natural oil finish that highlights the wood's grain. Its round top and sturdy tripod legs make it stable on any floor surface. Place it beside a sofa or bed for a timeless, artisanal accent.",
+    "images": [
+      "assets/uploads/2026/01/Living_3.jpg",
+      "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Living_5.jpg"
+    ]
+  },
+  {
+    "slug": "hawk-green-enamel-drink-table",
+    "title": "Hawk Green Enamel Drink Table",
+    "category": "living-room",
+    "price": "185.00",
+    "sale_price": null,
+    "description": "A retro-inspired enamel-top drink table finished in a bold forest green. The powder-coated steel frame with tripod legs is both sturdy and stylish. The enamel surface is heat-resistant and easy to wipe clean — perfect for your morning coffee or evening cocktail.",
+    "images": [
+      "assets/uploads/2026/01/Living_6.jpg",
+      "assets/uploads/2026/01/Living_9.jpg",
+      "assets/uploads/2026/01/Living_3.jpg"
+    ]
+  },
+  {
+    "slug": "jomparis-wall-clock-12inch",
+    "title": "Jomparis Wall Clock 12 Inch Silent",
     "category": "living-room",
     "price": "188.00",
     "sale_price": null,
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "This 12-inch minimalist wall clock features a clean white face, bold numerals, and a silent sweep mechanism — no ticking to disturb your peace. The slim aluminum frame suits modern, Scandinavian, and industrial interiors. Battery-operated with easy wall mounting.",
     "images": [
       "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Living_5.jpg",
+      "assets/uploads/2026/01/Living_6.jpg"
+    ]
+  },
+  {
+    "slug": "vosges-wall-clock-yellow",
+    "title": "Vosges Wall Clock Yellow 60cm",
+    "category": "living-room",
+    "price": "225.00",
+    "sale_price": null,
+    "description": "Make a bold design statement with this oversized 60cm wall clock in sunny yellow. The large Arabic numerals and contrasting frame create a striking focal point in living rooms, kitchens, or hallways. Silent movement keeps time accurately without noise.",
+    "images": [
+      "assets/uploads/2026/01/Living_9.jpg",
       "assets/uploads/2026/01/Living_6.jpg",
-      "assets/uploads/2026/01/Bedroom_3.jpg",
-      "assets/uploads/2026/01/Kitchen_9.jpg",
-      "assets/uploads/2026/01/Bathroom_2.jpg"
+      "assets/uploads/2026/01/Living_8.jpg"
+    ]
+  },
+  {
+    "slug": "wall-clock-modern-silent",
+    "title": "Modern Silent Wall Clock",
+    "category": "living-room",
+    "price": "78.00",
+    "sale_price": null,
+    "description": "A contemporary wall clock with a frameless floating-number design and whisper-quiet movement. The minimalist face with no numbers suits modern and Scandinavian interiors perfectly. Requires one AA battery (not included). Available in multiple finishes.",
+    "images": [
+      "assets/uploads/2026/01/Living_5.jpg",
+      "assets/uploads/2026/01/Living_8.jpg",
+      "assets/uploads/2026/01/Living_3.jpg"
+    ]
+  },
+  {
+    "slug": "wall-clock-unique-motifs",
+    "title": "Decorative Wall Clock with Motifs",
+    "category": "living-room",
+    "price": "145.00",
+    "sale_price": null,
+    "description": "An artisan wall clock featuring hand-painted floral and geometric motifs on a ceramic face. Each piece is unique with slight variations in the painted pattern. The wrought iron frame adds rustic charm. A one-of-a-kind conversation piece for your living room or hallway.",
+    "images": [
+      "assets/uploads/2026/01/Living_8.jpg",
+      "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Living_9.jpg"
+    ]
+  },
+  {
+    "slug": "teo-square-cast-decorative-tray",
+    "title": "Teo Square Cast Decorative Tray",
+    "category": "living-room",
+    "price": "95.00",
+    "sale_price": null,
+    "description": "This square decorative tray is cast from solid aluminum with an antique bronze finish. Use it to corral candles, books, and décor on a coffee table, or as a functional catchall on a console. The raised edge keeps items neatly contained.",
+    "images": [
+      "assets/uploads/2026/01/Living_6.jpg",
+      "assets/uploads/2026/01/Living_3.jpg",
+      "assets/uploads/2026/01/Living_7.jpg"
+    ]
+  },
+  {
+    "slug": "sergio-green-marble-square-table",
+    "title": "Sergio Green Marble Square Side Table",
+    "category": "living-room",
+    "price": "380.00",
+    "sale_price": null,
+    "description": "The Sergio side table features a genuine verde green marble top set on a polished brass base. Each marble slab is unique, with natural veining that makes every table one of a kind. A sophisticated accent for any living room, bedroom, or entryway.",
+    "images": [
+      "assets/uploads/2026/01/Living_9.jpg",
+      "assets/uploads/2026/01/Living_5.jpg",
+      "assets/uploads/2026/01/Living_8.jpg"
+    ]
+  },
+  {
+    "slug": "wellin-brown-metal-lounge-chair",
+    "title": "Wellin Brown Metal Lounge Chair",
+    "category": "living-room",
+    "price": "420.00",
+    "sale_price": "375.00",
+    "description": "The Wellin lounge chair blends industrial metal construction with plush brown leather upholstery for a look that's both rugged and refined. The slightly reclined angle and padded armrests invite relaxed sitting. Powder-coated steel frame with floor-protecting rubber feet.",
+    "images": [
+      "assets/uploads/2026/01/Living_8.jpg",
+      "assets/uploads/2026/01/Living_6.jpg",
+      "assets/uploads/2026/01/Living_5.jpg"
+    ]
+  },
+  {
+    "slug": "gwyneth-yellow-velvet-swivel-chair",
+    "title": "Gwyneth Yellow Velvet Swivel Chair",
+    "category": "living-room",
+    "price": "440.00",
+    "sale_price": null,
+    "description": "Turn heads with this bold sunflower yellow velvet swivel chair. The 360-degree base and high backrest create a dramatic, throne-like presence in any living room or home office. Dense foam padding and velvet upholstery make long sitting sessions genuinely comfortable.",
+    "images": [
+      "assets/uploads/2026/01/Living_7.jpg",
+      "assets/uploads/2026/01/Living_3.jpg",
+      "assets/uploads/2026/01/Living_9.jpg"
+    ]
+  },
+  {
+    "slug": "gwyneth-black-boucle-swivel-chair",
+    "title": "Gwyneth Black Boucle Swivel Chair",
+    "category": "living-room",
+    "price": "460.00",
+    "sale_price": null,
+    "description": "The black boucle version of the Gwyneth swivel chair delivers a sophisticated, contemporary edge. The textured boucle fabric contrasts beautifully with the polished chrome swivel base. A statement piece that works equally well in a home office or living room.",
+    "images": [
+      "assets/uploads/2026/01/Living_5.jpg",
+      "assets/uploads/2026/01/Living_8.jpg",
+      "assets/uploads/2026/01/Living_6.jpg"
+    ]
+  },
+  {
+    "slug": "etana-grey-leather-office-chair",
+    "title": "Etana Grey Leather Office Chair",
+    "category": "office",
+    "price": "520.00",
+    "sale_price": "475.00",
+    "description": "Designed for long workdays, the Etana office chair features full-grain grey leather upholstery, adjustable lumbar support, and synchronized tilt mechanism. The 5-star polished aluminum base with smooth-rolling casters provides stability and easy mobility.",
+    "images": [
+      "assets/uploads/2026/01/Office_3.jpg",
+      "assets/uploads/2026/01/Office_7.jpg",
+      "assets/uploads/2026/01/Office_1.jpg"
     ]
   },
   {
@@ -99,13 +473,232 @@
     "category": "office",
     "price": "138.00",
     "sale_price": "130.00",
-    "description": "Nam eleifend turpis at imperdiet feugiat. Proin sed orci sed augue suscipit tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec tincidunt ligula. Sed id enim eu est dapibus blandit. Sed accumsan enim vel magna scelerisque,",
+    "description": "The Matri chair combines clean white leather with a minimalist chrome frame for a modern, professional aesthetic. Height-adjustable seat, 360-degree swivel, and armrests that fold flush with the seat. Perfect for home offices prioritizing clean, light design.",
     "images": [
       "assets/uploads/2026/01/Office_5.jpg",
       "assets/uploads/2026/01/Office_8.jpg",
-      "assets/uploads/2026/01/Office_7.jpg",
+      "assets/uploads/2026/01/Office_7.jpg"
+    ]
+  },
+  {
+    "slug": "etana-navy-upholstered-gold-chair",
+    "title": "Etana Navy Upholstered Gold Chair",
+    "category": "office",
+    "price": "498.00",
+    "sale_price": null,
+    "description": "This striking executive chair pairs deep navy velvet upholstery with gold-finished armrests and a five-star base. The high back offers full spinal support, while the reclining mechanism allows you to lean back during calls or creative thinking sessions.",
+    "images": [
+      "assets/uploads/2026/01/Office_6.jpg",
+      "assets/uploads/2026/01/Office_2.jpg",
+      "assets/uploads/2026/01/Office_9.jpg"
+    ]
+  },
+  {
+    "slug": "muir-oxblood-velvet-office-chair",
+    "title": "Muir Oxblood Velvet Office Chair",
+    "category": "office",
+    "price": "445.00",
+    "sale_price": null,
+    "description": "The Muir chair brings drama and comfort to your workspace with rich oxblood velvet upholstery and a brushed gold base. The mid-century modern silhouette features button tufting on the back, adjustable height, and smooth casters for easy movement on any floor.",
+    "images": [
+      "assets/uploads/2026/01/Office_4.jpg",
+      "assets/uploads/2026/01/Office_9.jpg",
+      "assets/uploads/2026/01/Office_6.jpg"
+    ]
+  },
+  {
+    "slug": "savitis-bone-red-office-chair",
+    "title": "Saviti Red Velvet Office Chair",
+    "category": "office",
+    "price": "390.00",
+    "sale_price": "349.00",
+    "description": "Command attention at your desk with this bold red velvet office chair. The Saviti's high curved backrest and deep padded seat provide ergonomic comfort during long work sessions. The polished chrome base with rubber-tipped casters glides smoothly on both carpet and hard floors.",
+    "images": [
+      "assets/uploads/2026/01/Office_9.jpg",
+      "assets/uploads/2026/01/Office_3.jpg",
+      "assets/uploads/2026/01/Office_5.jpg"
+    ]
+  },
+  {
+    "slug": "portable-fabric-wardrobe-closet",
+    "title": "Portable Fabric Wardrobe Closet Organizer",
+    "category": "office",
+    "price": "89.00",
+    "sale_price": null,
+    "description": "Expand your storage instantly with this portable fabric wardrobe. The sturdy steel frame assembles in minutes without tools and supports up to 110 lbs. Includes a hanging rod, two shelves, and a zip-up dust cover. Perfect for small apartments, guest rooms, or home offices.",
+    "images": [
+      "assets/uploads/2026/01/Office_1.jpg",
+      "assets/uploads/2026/01/Office_4.jpg",
+      "assets/uploads/2026/01/Office_8.jpg"
+    ]
+  },
+  {
+    "slug": "4-wheel-furniture-moving-tool-set",
+    "title": "4-Wheel Furniture Moving Tool Set",
+    "category": "office",
+    "price": "55.00",
+    "sale_price": null,
+    "description": "Move heavy furniture and appliances safely with this 4-piece furniture mover set. Each heavy-duty dolly supports up to 330 lbs, with smooth-rolling wheels designed for both carpet and hard floors. No lifting required — simply slide under and roll.",
+    "images": [
+      "assets/uploads/2026/01/Office_2.jpg",
+      "assets/uploads/2026/01/Office_6.jpg",
+      "assets/uploads/2026/01/Office_7.jpg"
+    ]
+  },
+  {
+    "slug": "floral-cutout-folding-room-divider",
+    "title": "Floral Cutout Folding Room Divider",
+    "category": "office",
+    "price": "195.00",
+    "sale_price": null,
+    "description": "Create flexible, private spaces with this decorative 4-panel folding room divider. The intricate floral laser-cut pattern casts beautiful shadow patterns when backlit. Lightweight yet sturdy MDF construction with a white powder-coat finish. Easy to fold and store.",
+    "images": [
+      "assets/uploads/2026/01/Office_8.jpg",
       "assets/uploads/2026/01/Office_1.jpg",
       "assets/uploads/2026/01/Office_3.jpg"
+    ]
+  },
+  {
+    "slug": "wall-mounted-garden-hose-holder",
+    "title": "Wall-Mounted Retractable Garden Hose",
+    "category": "office",
+    "price": "75.00",
+    "sale_price": null,
+    "description": "Keep your garden hose tidy and tangle-free with this wall-mounted retractable reel. Holds up to 100 feet of 5/8 inch hose. The auto-rewind mechanism pulls the hose back at the press of a lever. Weather-resistant ABS housing handles UV, rain, and frost.",
+    "images": [
+      "assets/uploads/2026/01/Office_7.jpg",
+      "assets/uploads/2026/01/Office_5.jpg",
+      "assets/uploads/2026/01/Office_2.jpg"
+    ]
+  },
+  {
+    "slug": "dara-sleek-linen-table-lamp",
+    "title": "Dara Sleek Linen Table Lamp",
+    "category": "lighting",
+    "price": "165.00",
+    "sale_price": null,
+    "description": "The Dara table lamp features a natural linen drum shade on a slim brushed brass base. The warm diffused light creates an inviting atmosphere perfect for bedside reading, living room accent, or home office task lighting. Uses a standard E26 bulb (not included).",
+    "images": [
+      "assets/uploads/2026/01/Lighting_1.jpg",
+      "assets/uploads/2026/01/Lighting_4.jpg",
+      "assets/uploads/2026/01/Lighting_7.jpg"
+    ]
+  },
+  {
+    "slug": "dara-white-linen-table-lamp",
+    "title": "Dara White Linen Table Lamp",
+    "category": "lighting",
+    "price": "155.00",
+    "sale_price": null,
+    "description": "A clean, contemporary take on the classic table lamp — the Dara White features a crisp white linen shade over a matte white ceramic base. The neutral palette works seamlessly with any décor style. Cord switch for easy on/off control.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_2.jpg",
+      "assets/uploads/2026/01/Lighting_5.jpg",
+      "assets/uploads/2026/01/Lighting_8.jpg"
+    ]
+  },
+  {
+    "slug": "eline-textured-glass-pendant-light",
+    "title": "Eline Textured Glass Pendant Light",
+    "category": "lighting",
+    "price": "220.00",
+    "sale_price": null,
+    "description": "The Eline pendant light features a handblown textured glass globe that scatters warm light in all directions. The matte black canopy and braided cord add an industrial-chic contrast. Adjustable cord length allows customization for high or low ceilings.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_3.jpg",
+      "assets/uploads/2026/01/Lighting_6.jpg",
+      "assets/uploads/2026/01/Lighting_1.jpg"
+    ]
+  },
+  {
+    "slug": "finlay-stainless-steel-wall-sconce",
+    "title": "Finlay Stainless Steel Wall Sconce",
+    "category": "lighting",
+    "price": "189.00",
+    "sale_price": "159.00",
+    "description": "This brushed stainless steel wall sconce delivers directional task lighting with a modern industrial aesthetic. The adjustable swivel arm lets you aim the light exactly where you need it. Hardwired installation with a standard wall plate — ideal for hallways, bedrooms, and reading nooks.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_4.jpg",
+      "assets/uploads/2026/01/Lighting_7.jpg",
+      "assets/uploads/2026/01/Lighting_2.jpg"
+    ]
+  },
+  {
+    "slug": "lamina-brass-flush-mount-light",
+    "title": "Lamina Brass Flush Mount Ceiling Light",
+    "category": "lighting",
+    "price": "275.00",
+    "sale_price": null,
+    "description": "The Lamina flush-mount fixture features a solid antique brass frame with a frosted glass diffuser. The low-profile design is perfect for rooms with lower ceilings while still making a statement. Compatible with LED and incandescent bulbs up to 60W.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_5.jpg",
+      "assets/uploads/2026/01/Lighting_8.jpg",
+      "assets/uploads/2026/01/Lighting_3.jpg"
+    ]
+  },
+  {
+    "slug": "lecko-milky-glass-pendant-light",
+    "title": "Lecko Milky Glass Pendant Light",
+    "category": "lighting",
+    "price": "198.00",
+    "sale_price": null,
+    "description": "The Lecko pendant light pairs a smooth milky-white opal glass globe with a slim rose-gold fitting for a look that's both soft and chic. The opaque glass diffuses light evenly to eliminate harsh shadows — ideal above kitchen islands, dining tables, or bathroom vanities.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_6.jpg",
+      "assets/uploads/2026/01/Lighting_1.jpg",
+      "assets/uploads/2026/01/Lighting_5.jpg"
+    ]
+  },
+  {
+    "slug": "marra-brass-tiered-pendant-light",
+    "title": "Marra Brass Tiered Pendant Light",
+    "category": "lighting",
+    "price": "345.00",
+    "sale_price": null,
+    "description": "A showstopping tiered pendant with multiple brass arms radiating from a central canopy, each holding a small Edison bulb. The warm glow creates dramatic ambient lighting over dining tables or in entryways. Includes a height-adjustable rod for installation flexibility.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_7.jpg",
+      "assets/uploads/2026/01/Lighting_3.jpg",
+      "assets/uploads/2026/01/Lighting_6.jpg"
+    ]
+  },
+  {
+    "slug": "nassa-woven-bamboo-pendant-light",
+    "title": "Nassa Woven Bamboo Pendant Light",
+    "category": "lighting",
+    "price": "148.00",
+    "sale_price": null,
+    "description": "Bring natural warmth and texture to your space with this hand-woven bamboo pendant light. The intricate weave pattern casts beautiful dappled shadows on surrounding walls and ceilings. Eco-friendly materials and a natural finish make this an excellent choice for boho and coastal interiors.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_8.jpg",
+      "assets/uploads/2026/01/Lighting_4.jpg",
+      "assets/uploads/2026/01/Lighting_7.jpg"
+    ]
+  },
+  {
+    "slug": "press-oak-wood-table-lamp",
+    "title": "Press Oak Wood Table Lamp",
+    "category": "lighting",
+    "price": "192.00",
+    "sale_price": null,
+    "description": "The Press lamp features a solid oak wood base with a natural grain finish and a simple white linen shade. The weighted base and adjustable shade angle make it practical and beautiful on a desk, side table, or bedside. A timeless piece that warms any room.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_1.jpg",
+      "assets/uploads/2026/01/Lighting_5.jpg",
+      "assets/uploads/2026/01/Lighting_3.jpg"
+    ]
+  },
+  {
+    "slug": "tiro-3-light-aged-brass-pendant",
+    "title": "Tiro 3-Light Aged Brass Pendant",
+    "category": "lighting",
+    "price": "415.00",
+    "sale_price": null,
+    "description": "A dramatic 3-arm pendant light in aged brass with clear glass Edison bulbs on adjustable cord arms. Each arm's height and angle can be customized independently for the perfect arrangement. Creates warm, layered ambient lighting over dining tables or kitchen islands.",
+    "images": [
+      "assets/uploads/2026/01/Lighting_2.jpg",
+      "assets/uploads/2026/01/Lighting_6.jpg",
+      "assets/uploads/2026/01/Lighting_8.jpg"
     ]
   }
 ]
