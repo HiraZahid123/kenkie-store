@@ -95,3 +95,60 @@
 		display: none !important;
 	}
 }
+
+/* Header: on mobile, show only the login icon (not the "Login" text) to
+   save space in the already-tight icon row. Desktop keeps icon + text. */
+@media (max-width: 767px) {
+	.login-heading {
+		display: none !important;
+	}
+	.login-icon {
+		display: inline-flex !important;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* Footer (mobile): the brand block, social icons, and link columns are
+   left-aligned to match the desktop multi-column layout, but once the
+   footer stacks into a single column on mobile that reads as randomly
+   off-center. Center everything to match the stacked layout. */
+@media (max-width: 767px) {
+	.elementor-element-e438e76 .elementor-element-6b39d5e .elementor-image-box-wrapper {
+		align-items: center !important;
+		text-align: center !important;
+	}
+	.elementor-element-e438e76 .elementor-element-2dcdf29 .elementor-widget-container,
+	.elementor-element-e438e76 .elementor-element-2dcdf29 .elementor-icon-list-items {
+		text-align: center !important;
+		justify-content: center !important;
+	}
+	.elementor-element-e438e76 .elementor-heading-title,
+	.elementor-element-e438e76 .kenkie-footer-col,
+	.elementor-element-e438e76 .kenkie-footer-col .elementor-widget-container,
+	.elementor-element-e438e76 .kenkie-footer-col ul.elementor-icon-list-items {
+		text-align: center !important;
+	}
+	/* The icon-list widget renders each link as a flex item (icon + text
+	   side by side), so text-align on the <ul>/<li> has no effect on them —
+	   need justify-content to actually center the flex row itself. */
+	.elementor-element-e438e76 .kenkie-footer-col ul.elementor-icon-list-items {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+	.elementor-element-e438e76 .kenkie-footer-col .elementor-icon-list-item,
+	.elementor-element-e438e76 .kenkie-footer-col .elementor-icon-list-item a {
+		justify-content: center !important;
+		width: 100%;
+	}
+}
+
+/* Header (mobile): the cart subtotal ("Total: $0.00") next to the bag icon
+   takes up space that's already tight on small screens and duplicates the
+   count badge on the icon itself — hide the text, keep the icon + badge. */
+@media (max-width: 767px) {
+	.swe-cart-subtotal {
+		display: none !important;
+	}
+}
