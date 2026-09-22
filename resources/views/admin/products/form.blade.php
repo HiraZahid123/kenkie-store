@@ -8,6 +8,17 @@
                     @method('PUT')
                 @endif
 
+                @if ($errors->any())
+                    <div class="p-4 bg-red-50 border border-red-200 text-red-800 rounded-lg text-sm">
+                        <p class="font-semibold mb-1">Please fix the following:</p>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
@@ -19,6 +30,7 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">SKU</label>
                         <input type="text" name="sku" value="{{ old('sku', $product->sku) }}"
                                class="block w-full rounded-lg border-gray-300 focus:border-[#22c55e] focus:ring-[#22c55e]">
+                        @error('sku') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
                 </div>
 
@@ -27,6 +39,7 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Slug (auto if blank)</label>
                         <input type="text" name="slug" value="{{ old('slug', $product->slug) }}"
                                class="block w-full rounded-lg border-gray-300 focus:border-[#22c55e] focus:ring-[#22c55e]">
+                        @error('slug') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
@@ -52,11 +65,13 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Sale Price</label>
                         <input type="number" step="0.01" name="sale_price" value="{{ old('sale_price', $product->sale_price) }}"
                                class="block w-full rounded-lg border-gray-300 focus:border-[#22c55e] focus:ring-[#22c55e]">
+                        @error('sale_price') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Stock</label>
                         <input type="number" name="stock" value="{{ old('stock', $product->stock ?? 0) }}"
                                class="block w-full rounded-lg border-gray-300 focus:border-[#22c55e] focus:ring-[#22c55e]">
+                        @error('stock') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                     </div>
                 </div>
 
@@ -76,6 +91,19 @@
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Gallery Images</label>
+                    @if ($product->gallery)
+                        <div class="flex flex-wrap gap-3 mb-3">
+                            @foreach ($product->gallery as $path)
+                                <label class="relative block cursor-pointer">
+                                    <img src="{{ asset('storage/'.$path) }}" class="h-20 w-20 object-cover rounded-lg border">
+                                    <span class="absolute -top-2 -right-2 bg-white rounded-full shadow border">
+                                        <input type="checkbox" name="remove_gallery[]" value="{{ $path }}" class="m-1.5 rounded border-gray-300 text-red-600 focus:ring-red-500">
+                                    </span>
+                                </label>
+                            @endforeach
+                        </div>
+                        <p class="text-xs text-gray-400 mb-2">Check an image's box to remove it when you save.</p>
+                    @endif
                     <input type="file" name="gallery[]" accept="image/*" multiple class="block w-full text-sm">
                 </div>
 

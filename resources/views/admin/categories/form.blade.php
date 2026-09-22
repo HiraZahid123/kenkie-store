@@ -27,6 +27,7 @@
                         <img src="{{ asset('storage/' . $category->image) }}" class="h-16 w-16 object-cover rounded-lg border mb-2">
                     @endif
                     <input type="file" name="image" accept="image/*" class="block w-full text-sm">
+                    @error('image') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                 </div>
 
                 <div class="flex items-center gap-4 pt-2">

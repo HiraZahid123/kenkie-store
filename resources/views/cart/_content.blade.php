@@ -79,18 +79,20 @@
                         </tr>
                         <tr class="shipping" style="border-bottom: 1px solid #f1f5f9;">
                             <th style="padding: 10px 0; text-align: left; font-weight: 600; color: #6b7280;">Shipping</th>
-                            <td style="padding: 10px 0; text-align: right; color: #22c55e; font-weight: 600;">Free Shipping</td>
+                            <td style="padding: 10px 0; text-align: right; font-weight: 600; color: {{ $shippingFee > 0 ? '#111827' : '#22c55e' }};">
+                                {{ $shippingFee > 0 ? '$'.number_format($shippingFee, 2) : 'Free Shipping' }}
+                            </td>
                         </tr>
                         <tr class="order-total">
                             <th style="padding: 14px 0 0; text-align: left; font-weight: 700; font-size: 16px; color: #111827;">Total</th>
                             <td style="padding: 14px 0 0; text-align: right; font-weight: 800; font-size: 20px; color: #22c55e;">
-                                <span class="cart-total-amount">${{ number_format($subtotal, 2) }}</span>
+                                <span class="cart-total-amount">${{ number_format($subtotal + $shippingFee, 2) }}</span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="wc-proceed-to-checkout" style="margin-top: 20px;">
-                    <a href="javascript:void(0);" onclick="alert('Checkout process initiated! Thank you for testing Kenkie Store.');" class="checkout-button button alt wc-forward" style="display: block; width: 100%; text-align: center; background: #22c55e; color: #fff; padding: 14px; font-size: 16px; font-weight: 700; border-radius: 6px; text-decoration: none; box-sizing: border-box; cursor: pointer;">
+                    <a href="{{ route('checkout') }}" class="checkout-button button alt wc-forward" style="display: block; width: 100%; text-align: center; background: #22c55e; color: #fff; padding: 14px; font-size: 16px; font-weight: 700; border-radius: 6px; text-decoration: none; box-sizing: border-box; cursor: pointer;">
                         Proceed to Checkout
                     </a>
                 </div>

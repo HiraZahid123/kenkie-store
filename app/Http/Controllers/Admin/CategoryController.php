@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
@@ -24,12 +25,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data = $this->validated($request);
+        $data['slug'] = $this->resolveSlug($data, null);
 
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('categories', 'public');
         }
-
-        $data['slug'] = $data['slug'] ?: Str::slug($data['name']);
 
         Category::create($data);
 
@@ -44,12 +44,14 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $data = $this->validated($request);
+        $data['slug'] = $this->resolveSlug($data, $category->id);
 
         if ($request->hasFile('image')) {
+            if ($category->image) {
+                Storage::disk('public')->delete($category->image);
+            }
             $data['image'] = $request->file('image')->store('categories', 'public');
         }
-
-        $data['slug'] = $data['slug'] ?: Str::slug($data['name']);
 
         $category->update($data);
 
@@ -58,6 +60,10 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
+        if ($category->image) {
+            Storage::disk('public')->delete($category->image);
+        }
+
         $category->delete();
 
         return redirect()->route('admin.categories.index')->with('status', 'Category deleted.');
@@ -70,5 +76,23 @@ class CategoryController extends Controller
             'slug' => ['nullable', 'string', 'max:255'],
             'image' => ['nullable', 'image', 'max:4096'],
         ]);
+    }
+
+    /**
+     * Resolve the final slug (auto-generating from the name if left blank)
+     * and make sure it's unique, appending -2, -3, … if needed rather than
+     * letting a duplicate hit the database's unique constraint as a 500.
+     */
+    private function resolveSlug(array $data, ?int $ignoreId): string
+    {
+        $base = $data['slug'] ?: Str::slug($data['name']);
+        $slug = $base;
+        $suffix = 2;
+
+        while (Category::where('slug', $slug)->when($ignoreId, fn ($q) => $q->where('id', '!=', $ignoreId))->exists()) {
+            $slug = $base.'-'.$suffix++;
+        }
+
+        return $slug;
     }
 }

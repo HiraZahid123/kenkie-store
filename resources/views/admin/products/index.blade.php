@@ -1,5 +1,5 @@
 <x-admin-layout :title="'Products'">
-    <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
         <div>
             <h2 class="text-lg font-semibold text-gray-800">All Products</h2>
             <p class="text-sm text-gray-500">Manage your store's product catalog.</p>
@@ -9,6 +9,26 @@
             + Add Product
         </a>
     </div>
+
+    <form method="GET" class="flex items-center gap-3 mb-4 flex-wrap">
+        <input type="text" name="q" value="{{ request('q') }}" placeholder="Search by title or SKU…"
+               class="rounded-lg border-gray-300 text-sm focus:border-[#22c55e] focus:ring-[#22c55e] w-64">
+        <select name="category" onchange="this.form.submit()" class="rounded-lg border-gray-300 text-sm focus:border-[#22c55e] focus:ring-[#22c55e]">
+            <option value="">All categories</option>
+            @foreach ($categories as $cat)
+                <option value="{{ $cat->id }}" @selected(request('category') == $cat->id)>{{ $cat->name }}</option>
+            @endforeach
+        </select>
+        <select name="stock" onchange="this.form.submit()" class="rounded-lg border-gray-300 text-sm focus:border-[#22c55e] focus:ring-[#22c55e]">
+            <option value="">All stock levels</option>
+            <option value="low" @selected(request('stock') === 'low')>Low stock (1–5)</option>
+            <option value="out" @selected(request('stock') === 'out')>Out of stock</option>
+        </select>
+        <button type="submit" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg text-sm font-medium">Filter</button>
+        @if (request()->anyFilled(['q', 'category', 'stock']))
+            <a href="{{ route('admin.products.index') }}" class="text-sm text-gray-500 hover:underline">Clear</a>
+        @endif
+    </form>
 
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <table class="min-w-full divide-y divide-gray-100">
@@ -41,10 +61,12 @@
                         </td>
                         <td class="px-6 py-4 text-sm text-gray-600">{{ $product->category?->name ?? '—' }}</td>
                         <td class="px-6 py-4 text-sm">
-                            @if ($product->stock > 0)
-                                <span class="text-gray-700">{{ $product->stock }} in stock</span>
+                            @if ($product->stock <= 0)
+                                <span class="text-red-500 font-medium">Out of stock</span>
+                            @elseif ($product->stock <= 5)
+                                <span class="text-amber-600 font-medium">{{ $product->stock }} left (low)</span>
                             @else
-                                <span class="text-red-500">Out of stock</span>
+                                <span class="text-gray-700">{{ $product->stock }} in stock</span>
                             @endif
                         </td>
                         <td class="px-6 py-4 text-sm">
@@ -66,7 +88,13 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="px-6 py-12 text-center text-gray-400">No products yet — add your first one.</td>
+                        <td colspan="5" class="px-6 py-12 text-center text-gray-400">
+                            @if (request()->anyFilled(['q', 'category', 'stock']))
+                                No products match your filters.
+                            @else
+                                No products yet — add your first one.
+                            @endif
+                        </td>
                     </tr>
                 @endforelse
             </tbody>

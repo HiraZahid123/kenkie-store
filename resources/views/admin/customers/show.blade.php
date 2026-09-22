@@ -5,6 +5,21 @@
             <p class="text-sm text-gray-800">{{ $customer->name }}</p>
             <p class="text-sm text-gray-500">{{ $customer->email }}</p>
             <p class="text-xs text-gray-400 mt-2">Joined {{ $customer->created_at->format('M d, Y') }}</p>
+
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <p class="text-xs text-gray-500 mb-2">Role: <span class="font-medium text-gray-700">{{ ucfirst($customer->role) }}</span></p>
+                @if ($customer->id !== auth()->id())
+                    <form method="POST" action="{{ route('admin.customers.role', $customer) }}"
+                          onsubmit="return confirm('{{ $customer->isAdmin() ? 'Remove admin access from' : 'Grant admin access to' }} {{ $customer->name }}?');">
+                        @csrf
+                        @method('PATCH')
+                        <input type="hidden" name="role" value="{{ $customer->isAdmin() ? 'customer' : 'admin' }}">
+                        <button type="submit" class="text-sm text-blue-600 hover:underline">
+                            {{ $customer->isAdmin() ? 'Revoke admin access' : 'Make admin' }}
+                        </button>
+                    </form>
+                @endif
+            </div>
         </div>
 
         <div class="col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">

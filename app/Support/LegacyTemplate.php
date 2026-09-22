@@ -147,7 +147,7 @@ class LegacyTemplate
 
         // 4. Inject fresh scripts before </body>
         $scripts = '<script src="/assets/js/kenkie-wishlist.js?v=5"></script>'."\n"
-                 . '<script src="/assets/js/kenkie-cart.js?v=5"></script>'."\n";
+                 . '<script src="/assets/js/kenkie-cart.js?v=7"></script>'."\n";
 
         if (str_contains($html, '</body>')) {
             $html = self::replaceOnce($html, '</body>', $scripts.'</body>');

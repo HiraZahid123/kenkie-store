@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Setting;
 use App\Support\LegacyTemplate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -20,7 +21,13 @@ class CartController extends Controller
             $subtotal += $item['price'] * $item['quantity'];
         }
 
-        $cartContentHtml = View::make('cart._content', compact('cart', 'subtotal'))->render();
+        $shippingFee = (float) Setting::get('shipping_fee', 0);
+        $freeThreshold = Setting::get('free_shipping_threshold');
+        if ($freeThreshold !== null && $subtotal >= (float) $freeThreshold) {
+            $shippingFee = 0.0;
+        }
+
+        $cartContentHtml = View::make('cart._content', compact('cart', 'subtotal', 'shippingFee'))->render();
 
         $html = LegacyTemplate::spliceProductGrid('wishlist/index.html', '');
 

@@ -20,6 +20,8 @@ class DashboardController extends Controller
 
         $recentOrders = Order::latest()->take(5)->get();
 
-        return view('admin.dashboard', compact('stats', 'recentOrders'));
+        $lowStockProducts = Product::where('stock', '<=', 5)->orderBy('stock')->take(6)->get();
+
+        return view('admin.dashboard', compact('stats', 'recentOrders', 'lowStockProducts'));
     }
 }

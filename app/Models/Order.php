@@ -22,6 +22,8 @@ class Order extends Model
         'shipping_address',
         'status',
         'payment_status',
+        'payment_method',
+        'stripe_session_id',
         'subtotal',
         'shipping_fee',
         'total',
@@ -36,5 +38,19 @@ class Order extends Model
     public function items(): HasMany
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'order_number';
+    }
+
+    public static function generateOrderNumber(): string
+    {
+        do {
+            $number = 'KNK-'.now()->format('Ymd').'-'.strtoupper(\Illuminate\Support\Str::random(5));
+        } while (static::where('order_number', $number)->exists());
+
+        return $number;
     }
 }

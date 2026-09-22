@@ -227,14 +227,55 @@
 			}
 		}
 
-		// 2. Product detail "+ / -" quantity buttons
+		// 1b. Single product page "Add to cart" button. The legacy WooCommerce
+		// theme's own add-to-cart / variation-swatch scripts attach their own
+		// click and/or submit handlers directly to this button and its form,
+		// and call preventDefault()/stopPropagation() there — since those run
+		// at the element's own phase, a bubble-phase document listener (or
+		// even the 'submit' event, which never fires once its default is
+		// cancelled) would never see it. Catching the click here, in the
+		// capture phase, runs before any element-level handler gets a chance.
+		var singleAddBtn = e.target.closest('.single_add_to_cart_button');
+		if (singleAddBtn) {
+			var singleForm = singleAddBtn.closest('form.cart');
+			var pIdInput = singleForm
+				? (singleForm.querySelector('input[name="product_id"]') || singleForm.querySelector('button[name="add-to-cart"]'))
+				: null;
+			var singlePId = pIdInput ? (pIdInput.value || pIdInput.getAttribute('value')) : singleAddBtn.getAttribute('value');
+
+			if (singlePId) {
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+
+				var qtyInput = singleForm ? singleForm.querySelector('input[name="quantity"]') : null;
+				var singleQty = qtyInput ? parseInt(qtyInput.value, 10) : 1;
+
+				var oldBtnText = singleAddBtn.textContent;
+				singleAddBtn.textContent = 'Adding...';
+				sendAddToCart(singlePId, singleQty || 1, function () {
+					singleAddBtn.textContent = 'Added to cart!';
+					setTimeout(function () {
+						singleAddBtn.textContent = oldBtnText;
+					}, 1800);
+				});
+				return;
+			}
+		}
+
+		// 2. Product detail "+ / -" quantity buttons. Same class names
+		// (.quantity .plus / .minus) are used by the legacy WooCommerce
+		// theme's own quantity script, so without stopping propagation both
+		// handlers fire on one click and the value jumps by 2 instead of 1.
 		var plusBtn = e.target.closest('.quantity .plus');
 		if (plusBtn) {
 			var wrapper = plusBtn.closest('.quantity');
 			var input = wrapper ? wrapper.querySelector('input.qty') : null;
 			if (input) {
-				input.value = (parseInt(input.value, 10) || 1) + 1;
 				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				input.value = (parseInt(input.value, 10) || 1) + 1;
 				return;
 			}
 		}
@@ -244,9 +285,11 @@
 			var wrapper = minusBtn.closest('.quantity');
 			var input = wrapper ? wrapper.querySelector('input.qty') : null;
 			if (input) {
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
 				var val = (parseInt(input.value, 10) || 1) - 1;
 				input.value = val < 1 ? 1 : val;
-				e.preventDefault();
 				return;
 			}
 		}
@@ -255,6 +298,8 @@
 		var miniRemoveBtn = e.target.closest('.mini-cart-item-remove');
 		if (miniRemoveBtn) {
 			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
 			var removeId = miniRemoveBtn.getAttribute('data-product-id');
 			if (removeId) {
 				sendRemoveFromCart(removeId, function () {
@@ -270,6 +315,8 @@
 		var cartTableRemove = e.target.closest('.kenkie-cart-item-remove');
 		if (cartTableRemove) {
 			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
 			var tableRemoveId = cartTableRemove.getAttribute('data-product-id');
 			if (tableRemoveId) {
 				sendRemoveFromCart(tableRemoveId, function () {
@@ -283,6 +330,8 @@
 		var cartQtyPlus = e.target.closest('.cart-qty-plus');
 		if (cartQtyPlus) {
 			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
 			var qId = cartQtyPlus.getAttribute('data-product-id');
 			var input = document.querySelector('.cart-qty-input[data-product-id="' + qId + '"]');
 			if (input) {
@@ -298,6 +347,8 @@
 		var cartQtyMinus = e.target.closest('.cart-qty-minus');
 		if (cartQtyMinus) {
 			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
 			var qId = cartQtyMinus.getAttribute('data-product-id');
 			var input = document.querySelector('.cart-qty-input[data-product-id="' + qId + '"]');
 			if (input) {
@@ -311,11 +362,23 @@
 		}
 	}, true);
 
-	// Intercept form submit on single product detail page
+	// Intercept form submit on single product detail page.
+	// Must run in the CAPTURE phase: the legacy WooCommerce theme also loads
+	// its own add-to-cart.js (and variation-swatch scripts) which attach
+	// their own submit handler directly to form.cart and call
+	// preventDefault()/stopPropagation() themselves — since they run at the
+	// element's own (bubble-order) phase, a normal bubble-phase listener on
+	// document never sees the event at all. Capturing it here, before it
+	// even reaches the form, guarantees ours wins and the legacy script
+	// (which POSTs to a WooCommerce wc-ajax endpoint that doesn't exist in
+	// this app and 404s) never runs.
 	document.addEventListener('submit', function (e) {
 		var form = e.target.closest('form.cart');
 		if (form) {
 			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
+
 			var pIdInput = form.querySelector('input[name="product_id"]') || form.querySelector('button[name="add-to-cart"]');
 			var pId = pIdInput ? (pIdInput.value || pIdInput.getAttribute('value')) : null;
 			var qtyInput = form.querySelector('input[name="quantity"]');
@@ -334,7 +397,7 @@
 				});
 			}
 		}
-	});
+	}, true);
 
 	document.addEventListener('DOMContentLoaded', function () {
 		syncCartData();

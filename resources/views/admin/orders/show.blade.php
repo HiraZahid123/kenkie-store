@@ -52,6 +52,14 @@
                 @if ($order->shipping_address)
                     <p class="text-sm text-gray-500 mt-2 whitespace-pre-line">{{ $order->shipping_address }}</p>
                 @endif
+                @if ($order->payment_method)
+                    <p class="text-xs text-gray-400 mt-3 pt-3 border-t border-gray-100">
+                        Payment method: <span class="font-medium text-gray-600">{{ $order->payment_method }}</span>
+                        @if ($order->stripe_session_id)
+                            <br>Stripe session: <span class="font-mono">{{ $order->stripe_session_id }}</span>
+                        @endif
+                    </p>
+                @endif
             </div>
 
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
