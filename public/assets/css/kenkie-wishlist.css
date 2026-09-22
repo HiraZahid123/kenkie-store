@@ -18,23 +18,25 @@
 	fill: currentColor;
 }
 
-/* Product-card action buttons (wishlist / compare / quick view / add to cart) */
+/* Product-card action buttons (wishlist / quick view / add to cart) */
 .item-wrap .item-img .item-bottom,
 .item-bottom {
 	right: auto !important;
 	left: 15px !important;
 	bottom: 15px !important;
 	top: auto !important;
+	gap: 10px !important;
 }
 
 .item-bottom .add_to_wishlist,
-.item-bottom .compare,
 .item-bottom .sw-quickview,
 .item-bottom .button,
 .item-bottom .add_to_cart_button,
 .wishlist-toggle {
-	border-radius: 0 !important;
-	outline: none !important;
+	border-radius: 50% !important;
+	outline: 2px solid #22c55e !important;
+	outline-offset: -2px;
+	margin: 0 !important;
 }
 
 
