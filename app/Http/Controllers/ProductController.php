@@ -19,11 +19,27 @@ class ProductController extends Controller
             $detailHtml
         );
 
-        $html = LegacyTemplate::replaceOnce(
-            $html,
-            '<title>Clark Light Persimmon Faux Mohair &#8211;',
-            '<title>'.$product->title.' &#8211;'
-        );
+        // The static shell (product/indexc0fa.html) is a single shared page
+        // for every product, hardcoded with one placeholder product's title
+        // in its <title>, meta tags, and breadcrumb. Swap every occurrence
+        // of that placeholder for the real product being viewed, wherever
+        // it currently is (it gets renamed from time to time, so read it
+        // back out of the page itself rather than hardcoding the string).
+        if (preg_match('/<li class="active"\s*><span>([^<]+)<\/span><\/li>/', $html, $m)) {
+            $placeholderTitle = $m[1];
+            $html = LegacyTemplate::replaceAll($html, $placeholderTitle, $product->title);
+        }
+
+        // The breadcrumb's category link (immediately before the product
+        // name) also needs to match the real product's category.
+        if ($product->category) {
+            $html = preg_replace(
+                '/(<a href="[^"]*product-category\/)[a-z0-9-]+(\/index\.html"\s*>)[^<]+(<\/a>)/',
+                '$1'.$product->category->slug.'$2'.$product->category->name.'$3',
+                $html,
+                1
+            );
+        }
 
         return response($html)->header('Content-Type', 'text/html');
     }

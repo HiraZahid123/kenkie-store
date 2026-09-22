@@ -13,10 +13,18 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\StorageController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
+
+// Fallback for /storage/* when the public/storage symlink is missing (see
+// StorageController docblock). Only reached if the web server didn't
+// already serve a real symlinked file for this path.
+Route::get('/storage/{path}', [StorageController::class, 'show'])
+    ->where('path', '.*')
+    ->name('storage.fallback');
 
 Route::get('/shop/index.html', [ShopController::class, 'index'])->name('shop');
 Route::get('/product-category/{slug}/index.html', [CategoryController::class, 'show'])->name('category.show');
